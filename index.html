@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>denish project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p style="font-family: cursive; font-size: larger;">UI/UX Designer</p>
+            <h2 class="sstt">Hi there! I'm <strong>Desnish Rai</strong>,
+                <br> a passionate UI/UX designer with a flair for creating captivating digital experiences.</h2>
+                <button type="submit" style="font-size: large; font-family: cursive;"><a href="about.html">Explore me</a></button>
+                <button type="submit" style="font-size: large; font-family: cursive;"><a href="resume.html">My Resume</a></button>
+            <br>
+        </div>
+    </div>
+</div>
+
+<!--  -->
+    <div class="copyright">
+        Address: Thimi-7, Bhaktapur </BR>
+        Denish Wry <br>
+        https://github.com/denishrai98 <br>
+Email:raidenish13@gmail.com <br>
+Phone: 9822484922
+        <p>Copyright @ 2023 All Right Reserved || Made with <i class="fas fa-heart"></i> by Denish Rai</p>
+  
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>

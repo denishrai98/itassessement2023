@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>service</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+  
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:black;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="images/logo.png" class="logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <h1 style="text-align: center;"> Gallery</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="images/p1.jpeg" alt="Photo 1" onclick="openOverlay(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="images/p2.jpeg" alt="Photo 2" onclick="openOverlay(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="images/p3.jpeg" alt="Photo 3" onclick="openOverlay(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="images/p4.jpeg" alt="Photo 4" onclick="openOverlay(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="images/p5.jpeg" alt="Photo 5" onclick="openOverlay(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="images/p6.jpeg" alt="Photo 6" onclick="openOverlay(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="images/p3.jpeg" alt="Photo 7" onclick="openOverlay(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="images/p6.jpeg" alt="Photo 8" onclick="openOverlay(this)">
+        </div>
+    </div>
+
+    <div class="overlay" onclick="closeOverlay()">
+        <img id="overlay-image" src="">
+    </div>
+
+    <script>
+        function openOverlay(image) {
+            const overlay = document.querySelector('.overlay');
+            const overlayImage = document.getElementById('overlay-image');
+            overlayImage.src = image.src;
+            overlay.style.display = 'flex';
+        }
+
+        function closeOverlay() {
+            const overlay = document.querySelector('.overlay');
+            overlay.style.display = 'none';
+        }
+    </script>
+    <div class="copyright">
+        Address: Thimi-7, Bhaktapur </BR>
+        Denish Wry <br>
+        https://github.com/denishrai98 <br>
+Email:raidenish13@gmail.com <br>
+Phone: 9822484922
+        <p>Copyright @ 2023 All Right Reserved || Made  <i class="fas fa-heart"></i> by Denish Rai</p>
+    </div>
+</body>
+</html>
